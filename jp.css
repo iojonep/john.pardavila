@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{											background-color: #000; margin: 0; padding: 0;
+												font-family: Verdana, Geneva, sans-serif; }
+
+.jptitle{										font-size: 3.0em; background-color: #ddd; margin: 0; padding: .25em;
+												border-bottom: 8px solid #666; font-family: Tahoma, Geneva, sans-serif}
+
+p, li, div, i, em{								font-size: .96em;}
+
+/* IMAGES */
+#jpimg_screen  div{								display: block; margin: 0; width: 100%; max-width: 100%; height: 100%; 
+												position: fixed; z-index: 1; margin-left: 100%;}
+
+#jpimg_screen #jp_1{							position: fixed; z-index: 2; margin-left: 0;}
+
+#jpimg_screen > div > img{						width: 100%; max-width: 100%; height: 100%;}
+													
+/* MAIN AREA */
+#jpmain_screen{									position: absolute; z-index: 300; top: 6%;
+												background-color: rgba(0,0,0, .3); width: 56%; height: auto;
+												border: 8px solid #555; margin-bottom: 5%;}	
+														
+#jpmain_screen_in{								margin: 0 auto; background-color: #eee;  overflow: auto; height: 100%; 
+												background-color: rgba(0,0,0, .75);}
+												
+.jpinfocell p,
+.jpinfocell li,
+.jpinfocell div{								padding: 2px 1em; color: #eee;}
+strong{											font-size: 1.25em; color: #09F}
+
+.jpinfocell a:link,
+.jpinfocell a:visited{							color: #FF6;}
+.jpinfocell a:hover{							color: #999;}
+																																
+/* NAVIGATION */
+#jp_nav{										position: fixed; z-index: 900;}												
+
+#jp_nav > div{									display: block; position: fixed; background-color: rgba(0,0,0,.4); cursor: pointer;}
+#jp_nav > div > img{							opacity: .40;}
+#jp_left{										left:  0; top: 0; height: 100%; margin: 0 auto; padding-top: 25%; }
+#jp_right{										right: 0; top: 0; height: 100%; margin: 0 auto; padding-top: 25%; }
+
+/* PHONE BREAKPOINT */
+@media only screen and (min-width: 280px) and (max-width: 640px) and (orientation:portrait), 
+only screen and (min-device-width: 280px) and (max-device-width: 640px) and (orientation:portrait){
+	
+#jpimg_screen > div > img{						width: 100%; height: auto; }
+	
+#jpmain_screen{									position: absolute; z-index: 300; top: 2%; left: auto; right: auto;
+												background-color: rgba(0,0,0, .3); width: 86%; height: auto;
+												border: 8px solid #555; margin-bottom: 5%;}	
+														
+#jpmain_screen_in{								margin: 0 auto; background-color: #eee;  overflow: auto; height: 100%; 
+												background-color: rgba(0,0,0, .75);}
+	
+	
+	
+	
+}
